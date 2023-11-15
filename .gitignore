@@ -3,5 +3,7 @@ lua-5.3.4/Makefile
 lua-5.3.4/README
 lua-5.3.4/doc/
 lua-5.3.4/src/
-/rttr-0.9.6-src
-/rttr-0.9.6-src.zip
+lua-5.4.6/*
+!lua-5.4.6/CMakeLists.txt
+/rttr/
+/lua/
