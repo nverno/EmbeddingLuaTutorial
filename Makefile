@@ -19,7 +19,7 @@ all:
 	@
 
 run: build
-	$(BUILDDIR)/src/LuaTutorial
+	$(BUILDDIR)/bin/tutorial
 
 build: $(BUILDDIR)
 	@make -C $(BUILDDIR)

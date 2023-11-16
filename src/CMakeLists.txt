@@ -16,20 +16,11 @@ else()
 endif()
 
 # source for the test executable
-set (LUA_TUTORIAL_SOURCES
-  "main.cpp"
-  "ArenaAllocator.h"
-  "AutomatedBinding.h"
-  "AutomatedBinding.cpp"
-  "TestRegistrations.cpp")
+file(GLOB LUA_TUTORIAL_SOURCES RELATIVE ${PROJECT_SOURCE_DIR} "*.cpp" "*.h")
 		
-source_group("src" FILES ${LUA_TUTORIAL_SOURCES})
-		
-add_executable(LuaTutorial
-  ${LUA_TUTORIAL_SOURCES} 
-)
+add_executable(tutorial ${LUA_TUTORIAL_SOURCES})
 
-target_link_libraries(LuaTutorial PUBLIC LuaLib)
+target_link_libraries(tutorial PUBLIC LuaLib)
 
 find_package(RTTR CONFIG REQUIRED Core)
-target_link_libraries(LuaTutorial PUBLIC RTTR::Core_Lib) # rttr as static library
+target_link_libraries(tutorial PUBLIC RTTR::Core_Lib) # rttr as static library

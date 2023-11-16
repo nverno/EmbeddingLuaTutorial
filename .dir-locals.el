@@ -1,0 +1,5 @@
+((nil . ((projectile-project-compilation-cmd . "make build")
+         (projectile-project-test-cmd         . "make test")
+         (projectile-project-run-cmd          . "make run")
+         (projectile-project-install-cmd      . "make install")
+         (projectile-project-configure-cmd    . "make rttr lua"))))
